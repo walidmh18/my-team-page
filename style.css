@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.header h1{
+    font-family: 'PT Serif', serif;
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+.who-we-are{
+    width: 40%;
+
+}
+.bodyContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 4rem 10rem;
+}
+.bodyContainer .member{
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 4rem;
+    cursor: pointer;
+    position: relative;
+}
+.member img{
+    width: 100%;
+}
+@media screen and (min-width: 769px) {
+    
+    .member:nth-child(3n + 2){
+        margin-bottom: 0;
+        margin-top: 5rem;
+    }
+}
+.member:first-child:after{
+    content: 'Product owner';
+    padding-bottom: 1rem;
+}
+.member:nth-child(2)::after{
+    content: 'Art director';
+}
+.member:nth-child(3)::after{
+    content: 'Tech Lead';
+}
+.member:nth-child(4)::after{
+    content: 'UX Designer';
+}
+.member:nth-child(5)::after,.member:nth-child(6)::after {
+    content: 'Developper';
+}
+.member::after{
+    color: black;
+    font-family: 'PT Serif', serif;
+    position: absolute;
+    right: -4rem;
+    top: 3rem;
+    transform: rotate(90deg);
+
+}
+.footer{
+    width: 100%;
+    text-align: center;
+    color: #A9A9A9;
+
+}
+.footer a{
+    color: #555;
+}
+
+@media screen and (max-width: 768px) {
+    .header{
+        flex-direction: column;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+    .who-we-are{
+        width: 90%;
+    
+    }
+    .bodyContainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        width: 85%;
+        padding: 4rem 0;
+        margin: auto;
+        /* margin-right: ; */
+    }
+    .member:nth-child(2n + 2){
+        margin-bottom: 0;
+        margin-top: 5rem;
+    }
+}
+
+
